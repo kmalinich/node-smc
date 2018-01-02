@@ -1,8 +1,6 @@
 let smc = require('./build/Release/smc');
 
 var metrics = {
-	'#KEY': 'Key count',
-
 	FNum: 'Fan count',
 
 	F0Ac: 'Fan 0 RPM',
@@ -41,13 +39,14 @@ var metrics = {
 	F6Tg: 'Fan 6 RPM target',
 
 	TA0P: 'Ambient 0P',
-	TA0S: 'PCI Slot 1 Pos 1',
 	TA0p: 'Ambient 0p',
 	TA1P: 'Ambient 1P',
-	TA1S: 'PCI Slot 1 Pos 2',
 	TA1p: 'Ambient 1p',
-	TA2S: 'PCI Slot 2 Pos 1',
-	TA3S: 'PCI Slot 2 Pos 2',
+
+	TA0S: 'PCIe 1 pos 1',
+	TA1S: 'PCIe 1 pos 2',
+	TA2S: 'PCIe 2 pos 1',
+	TA3S: 'PCIe 2 pos 2',
 
 	TB0T: 'Battery TS_MAX',
 	TB1T: 'Battery 1',
@@ -61,7 +60,7 @@ var metrics = {
 	TC0G: 'CPU 0 ??',
 	TC0H: 'CPU 0 Heatsink',
 	TC0J: 'CPU 0 ??',
-	TC0P: 'CPU 0 Proximity',
+	TC0P: 'CPU 0 proximity',
 
 	TC1D: 'CPU1 die',
 	TC2D: 'CPU2 die',
@@ -86,36 +85,36 @@ var metrics = {
 
 	TG0D: 'GPU 0 Die',
 	TG0H: 'GPU 0 Heatsink',
-	TG0P: 'GPU 0 Proximity',
+	TG0P: 'GPU 0 proximity',
 	TG1D: 'GPU 1 Die',
 	TG1H: 'GPU 1 Heatsink',
 
-	TH0P: 'Harddisk 0 Proximity',
+	TH0P: 'HDD 0 proximity',
 
-	TL0P: 'LCD Proximity',
+	TL0P: 'LCD 0 proximity',
 
-	TM0P: 'Memory Slot Proximity',
-	TM0S: 'Memory Slot 1',
+	TM0P: 'RAM slot 0 proximity',
+	TM0S: 'RAM slot 0 DIMM',
 
-	TO0P: 'Optical Drive Proximity',
+	TO0P: 'Optical drive proximity',
 
-	TPCD: 'Platform Controller Hub Die',
+	TPCD: 'Platform controller hub die',
 
 	TS0C: 'Expansion slots',
 
-	TW0P: 'AirPort Proximity',
+	TW0P: 'AirPort proximity',
 
-	Tb0P: 'BLC Proximity',
+	Tb0P: 'BLC proximity',
 
-	Th1H: 'NB/CPU/GPU HeatPipe 1 Proximity',
+	Th1H: 'NB/CPU/GPU heatpipe 1 proximity',
 
 	Tm0p: 'Misc proximity p (clock chip)',
 	Tm0P: 'Misc proximity P',
 
-	Tp0P: 'PowerSupply Proximity',
+	Tp0P: 'PowerSupply proximity',
 
 	Ts0P: 'Palm rest L',
-	Ts0S: 'Memory Bank Proximity',
+	Ts0S: 'Memory Bank proximity',
 	Ts1p: 'Palm rest R',
 
 	Vp1C: 'Voltage 1C',
