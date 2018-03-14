@@ -1,14 +1,18 @@
-var smc = require('../');
+/* eslint no-console : 0 */
 
-Object.keys(smc.metrics).forEach(function(key) {
-  var value = smc.get(key);
-  if (value > 0) {
-    console.log(key, smc.metrics[key]+':', value);
-  }
+const smc = require('../');
+
+Object.keys(smc.metrics).forEach((key) => {
+	let value = smc.get(key);
+
+	if (value > 0) {
+		console.log(key, smc.metrics[key] + ':', value);
+	}
 });
 
-var i, f = smc.fans();
+let i;
+let f = smc.fans();
 
 for (i = 0; i < f; i++) {
-  console.log('F'+i+'Ac', 'Fan', i, 'RPM:', smc.fanRpm(i));
+	console.log('F' + i + 'Ac', 'Fan', i, 'RPM:', smc.fanRpm(i));
 }
